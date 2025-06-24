@@ -9,79 +9,139 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      display: flex;
       background-color: #f0f4f8;
+    }
+    nav {
+      width: 220px;
+      background-color: #2d3748;
+      color: white;
+      height: 100vh;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+    }
+    nav h2 {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 10px 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    nav ul li a:hover {
+      color: #90cdf4;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
     }
     header {
       background-color: #2d3748;
       color: white;
       padding: 20px;
       text-align: center;
-    }
-    .container {
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
-      background: white;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      margin-top: 20px;
       border-radius: 8px;
+      margin-bottom: 20px;
     }
     h2 {
       color: #2c5282;
     }
     section {
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
     footer {
       text-align: center;
       padding: 10px;
       font-size: 0.9em;
       color: #666;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Physics Concept Explorer</h1>
-    <p>Understand concepts like never before — with logic, history, and real-life use</p>
-  </header>
-  <div class="container">
-    <h2>Centre of Mass (COM)</h2>
-    <section>
-      <h3>🔍 Kya hai?</h3>
-      <p>Ek imaginary point jahan poore system ka mass concentrated maan sakte hain. Motion analysis simplified ho jata hai.</p>
+  <nav>
+    <h2>📘 Topics</h2>
+    <ul>
+      <li><a href="#com">Centre of Mass</a></li>
+      <li><a href="#internal">Internal Forces</a></li>
+      <li><a href="#momentum">Momentum</a></li>
+      <li><a href="#newton">Newton's Laws</a></li>
+      <li><a href="#torque">Torque</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <header>
+      <h1>Physics Concept Explorer</h1>
+      <p>Understand concepts like never before — with logic, history, and real-life use</p>
+    </header>
+
+    <h2>⚙️ Mechanics</h2>
+
+    <section id="com">
+      <h3>Centre of Mass (COM)</h3>
+      <p><strong>🔍 Kya hai?</strong><br>Ek imaginary point jahan poore system ka mass concentrated maan sakte hain.</p>
+      <p><strong>🧠 Kyun padhein?</strong><br>Multiple particles ko ek hi point ki tarah treat kar sakte hain, motion simplify hota hai.</p>
+      <p><strong>🛠️ Real-life use:</strong><br>Robots, rockets, gymnastics mein COM stability zaroori hai.</p>
+      <p><strong>🤯 Agar nahi hota toh?</strong><br>System ka motion samajhna mushkil ho jaata.</p>
+      <p><strong>📜 Kisne banaya?</strong><br>Archimedes → Galileo → Newton → Euler</p>
+      <p><strong>💡 Real-life seekh:</strong><br>Balance life mein bhi zaroori hai jaise motion mein.</p>
     </section>
-    <section>
-      <h3>🧠 Kyun padhein?</h3>
-      <p>Multiple particles/system ko single particle ki tarah treat karne ke liye. Complex motion simplify hota hai.</p>
+
+    <section id="internal">
+      <h3>Sum of Internal Forces = 0</h3>
+      <p><strong>🔍 Kya hai?</strong><br>System ke andar jitne bhi particles ek doosre pe force lagate hain, unka net sum zero hota hai.</p>
+      <p><strong>🧠 Kyun padhein?</strong><br>COM aur momentum conservation samajhne ke liye fundamental hai.</p>
+      <p><strong>🛠️ Real-life use:</strong><br>Rocket explosions, gymnast ke jump mein system analysis.</p>
+      <p><strong>🤯 Agar nahi hota toh?</strong><br>System analysis impossible ho jaata, physics break ho jaata.</p>
+      <p><strong>📜 Kisne samjhaya?</strong><br>Newton's Third Law ke basis par concept bana.</p>
+      <p><strong>💡 Real-life seekh:</strong><br>Internal blame-shame system ka progress nahi badhata, teamwork chahiye.</p>
     </section>
-    <section>
-      <h3>🛠️ Real-life use</h3>
-      <p>Cars, robots, gymnastics, rockets — sab mein COM ki stability important hoti hai. Engineering design ka base.</p>
+
+    <section id="momentum">
+      <h3>Conservation of Momentum</h3>
+      <p><strong>🔍 Kya hai?</strong><br>Closed system mein total momentum constant rehta hai agar external force na ho.</p>
+      <p><strong>🧠 Kyun padhein?</strong><br>Collision, explosion, COM ke motion ka base concept hai.</p>
+      <p><strong>🛠️ Real-life use:</strong><br>Rocket propulsion, car crash analysis, billiards.</p>
+      <p><strong>🤯 Agar nahi hota toh?</strong><br>Motion prediction impossible hoti. Mechanics ka base toot jaata.</p>
+      <p><strong>📜 Kisne diya?</strong><br>Newton + modern derivation se aaya.</p>
+      <p><strong>💡 Seekh:</strong><br>Jo effort daaloge woh result milega — nothing goes waste.</p>
     </section>
-    <section>
-      <h3>🤯 Agar yeh concept nahi hota toh?</h3>
-      <p>Motion analysis bohot complex ho jata. Internal motion samajhna impossible hota. Engineering design unsafe ho jaate.</p>
+
+    <section id="newton">
+      <h3>Newton's Laws of Motion</h3>
+      <p><strong>🔍 Kya hai?</strong><br>Tin laws jo motion aur force ka relation define karte hain.</p>
+      <p><strong>🧠 Kyun padhein?</strong><br>Har motion problem ka base — force ke bina motion samajhna mushkil.</p>
+      <p><strong>🛠️ Real-life use:</strong><br>Seat belt design, elevator physics, walking, vehicles.</p>
+      <p><strong>🤯 Agar nahi hote?</strong><br>Physics vague hoti — motion ke liye koi law hi nahi hota.</p>
+      <p><strong>📜 Kisne diya?</strong><br>Sir Isaac Newton (1687)</p>
+      <p><strong>💡 Seekh:</strong><br>Force ke bina kuch move nahi karta — life mein bhi push chahiye hota hai.</p>
     </section>
-    <section>
-      <h3>📜 Kisne develop kiya?</h3>
-      <p>Archimedes → Galileo → Newton → Euler. Step by step develop hua over centuries.</p>
+
+    <section id="torque">
+      <h3>Torque</h3>
+      <p><strong>🔍 Kya hai?</strong><br>Rotational motion ke liye force ka effect — twisting force.</p>
+      <p><strong>🧠 Kyun padhein?</strong><br>Rotation, equilibrium, levers, wheels sab ke analysis ke liye important.</p>
+      <p><strong>🛠️ Real-life use:</strong><br>Steering wheel, wrench, ceiling fan motor.</p>
+      <p><strong>🤯 Agar nahi hota?</strong><br>Rotation ke problems samajhna mushkil ho jaata.</p>
+      <p><strong>📜 Kisne samjhaya?</strong><br>Euler + rotational mechanics ke pioneer scientists.</p>
+      <p><strong>💡 Seekh:</strong><br>Right direction me force lagao, result milega — warna ghoomte rahoge.</p>
     </section>
-    <section>
-      <h3>💡 Real-life se kya seekh milti hai?</h3>
-      <p>Balance zaroori hai — jaise COM se body stable hoti hai, waise life mein bhi balance hona chahiye.</p>
-    </section>
-    <section>
-      <h3>🛠️ Tum kya bana sakte ho?</h3>
-      <p>Self-balancing robot, COM visualizer app, sports tracker tool, or a physics quiz site.</p>
-    </section>
-    <section>
-      <h3>📚 JEE use</h3>
-      <p>COM questions aate hain motion, explosion, collision, and pulley systems mein. Highly tested area.</p>
-    </section>
+
+    <footer>
+      <p>Made by  • For learning and innovation • Add to Resume 🚀</p>
+    </footer>
   </div>
-  <footer>
-    <p>Made by [Your Name] • For learning and innovation • Add to Resume 🚀</p>
-  </footer>
 </body>
 </html>
