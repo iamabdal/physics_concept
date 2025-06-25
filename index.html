@@ -3,145 +3,228 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Physics Concept Explorer</title>
+  <title>Physics Career Explorer</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #f0f0f0;
       display: flex;
-      background-color: #f0f4f8;
     }
-    nav {
-      width: 220px;
-      background-color: #2d3748;
-      color: white;
+    aside {
+      background-color: #000;
+      width: 240px;
+      padding: 1.5rem;
       height: 100vh;
-      padding: 20px;
-      position: sticky;
+      position: fixed;
       top: 0;
+      left: 0;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
     }
-    nav h2 {
-      font-size: 1.2rem;
-      margin-bottom: 15px;
+    aside h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #33ccff;
     }
-    nav ul {
-      list-style: none;
-      padding: 0;
+    aside a:hover {
+      background-color: #00ccff;
+      color: black;
+      padding-left: 10px;
     }
-    nav ul li {
-      margin: 10px 0;
-    }
-    nav ul li a {
+    aside a {
       color: white;
       text-decoration: none;
-      transition: color 0.2s ease;
+      margin: 0.6rem 0;
+      font-weight: 500;
     }
-    nav ul li a:hover {
-      color: #90cdf4;
+    aside a:hover {
+      color: #00ccff;
     }
-    .content {
+    main {
+      margin-left: 260px;
+      padding: 2rem;
       flex: 1;
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
     }
-    header {
-      background-color: #2d3748;
+    .topic-section {
+      margin-bottom: 3rem;
+    }
+    .topic-section h3 {
+      color: #00ccff;
+      margin-bottom: 0.5rem;
+    }
+    .topic-section p {
+      color: #ccc;
+    }
+    .buttons {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+    .buttons a {
+      background-color: #222;
+      padding: 0.5rem 0.8rem;
+      border-radius: 6px;
       color: white;
-      padding: 20px;
-      text-align: center;
-      border-radius: 8px;
-      margin-bottom: 20px;
+      text-decoration: none;
+      border: 1px solid #444;
+      transition: 0.3s;
     }
-    h2 {
-      color: #2c5282;
+    .buttons a:hover {
+      background-color: #00ccff;
+      color: black;
     }
-    section {
-      margin-bottom: 30px;
+      .btn {
+      transition: transform 0.2s, background-color 0.3s;
     }
-    footer {
-      text-align: center;
-      padding: 10px;
-      font-size: 0.9em;
-      color: #666;
-      margin-top: 20px;
+    .btn:hover {
+      transform: scale(1.05);
+      background-color: #33ccff;
+      color: #000;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <h2>📘 Topics</h2>
-    <ul>
-      <li><a href="#com">Centre of Mass</a></li>
-      <li><a href="#internal">Internal Forces</a></li>
-      <li><a href="#momentum">Momentum</a></li>
-      <li><a href="#newton">Newton's Laws</a></li>
-      <li><a href="#torque">Torque</a></li>
-    </ul>
-  </nav>
+  <aside>
+    <h2>Topics</h2>
+    <a href="#newton">Newton's Laws</a>
+    <a href="#optics">Optics</a>
+    <a href="#acids">Acids & Bases</a>
+    <a href="#organic">Organic Chemistry</a>
+    <a href="#probability">Probability</a>
+    <a href="#calculus">Calculus</a>
+  </aside>
 
-  <div class="content">
-    <header>
-      <h1>Physics Concept Explorer</h1>
-      <p>Understand concepts like never before — with logic, history, and real-life use</p>
-    </header>
-
-    <h2>⚙️ Mechanics</h2>
-
-    <section id="com">
-      <h3>Centre of Mass (COM)</h3>
-      <p><strong>🔍 Kya hai?</strong><br>Ek imaginary point jahan poore system ka mass concentrated maan sakte hain.</p>
-      <p><strong>🧠 Kyun padhein?</strong><br>Multiple particles ko ek hi point ki tarah treat kar sakte hain, motion simplify hota hai.</p>
-      <p><strong>🛠️ Real-life use:</strong><br>Robots, rockets, gymnastics mein COM stability zaroori hai.</p>
-      <p><strong>🤯 Agar nahi hota toh?</strong><br>System ka motion samajhna mushkil ho jaata.</p>
-      <p><strong>📜 Kisne banaya?</strong><br>Archimedes → Galileo → Newton → Euler</p>
-      <p><strong>💡 Real-life seekh:</strong><br>Balance life mein bhi zaroori hai jaise motion mein.</p>
-    </section>
-
-    <section id="internal">
-      <h3>Sum of Internal Forces = 0</h3>
-      <p><strong>🔍 Kya hai?</strong><br>System ke andar jitne bhi particles ek doosre pe force lagate hain, unka net sum zero hota hai.</p>
-      <p><strong>🧠 Kyun padhein?</strong><br>COM aur momentum conservation samajhne ke liye fundamental hai.</p>
-      <p><strong>🛠️ Real-life use:</strong><br>Rocket explosions, gymnast ke jump mein system analysis.</p>
-      <p><strong>🤯 Agar nahi hota toh?</strong><br>System analysis impossible ho jaata, physics break ho jaata.</p>
-      <p><strong>📜 Kisne samjhaya?</strong><br>Newton's Third Law ke basis par concept bana.</p>
-      <p><strong>💡 Real-life seekh:</strong><br>Internal blame-shame system ka progress nahi badhata, teamwork chahiye.</p>
-    </section>
-
-    <section id="momentum">
-      <h3>Conservation of Momentum</h3>
-      <p><strong>🔍 Kya hai?</strong><br>Closed system mein total momentum constant rehta hai agar external force na ho.</p>
-      <p><strong>🧠 Kyun padhein?</strong><br>Collision, explosion, COM ke motion ka base concept hai.</p>
-      <p><strong>🛠️ Real-life use:</strong><br>Rocket propulsion, car crash analysis, billiards.</p>
-      <p><strong>🤯 Agar nahi hota toh?</strong><br>Motion prediction impossible hoti. Mechanics ka base toot jaata.</p>
-      <p><strong>📜 Kisne diya?</strong><br>Newton + modern derivation se aaya.</p>
-      <p><strong>💡 Seekh:</strong><br>Jo effort daaloge woh result milega — nothing goes waste.</p>
-    </section>
-
-    <section id="newton">
-      <h3>Newton's Laws of Motion</h3>
-      <p><strong>🔍 Kya hai?</strong><br>Tin laws jo motion aur force ka relation define karte hain.</p>
-      <p><strong>🧠 Kyun padhein?</strong><br>Har motion problem ka base — force ke bina motion samajhna mushkil.</p>
-      <p><strong>🛠️ Real-life use:</strong><br>Seat belt design, elevator physics, walking, vehicles.</p>
-      <p><strong>🤯 Agar nahi hote?</strong><br>Physics vague hoti — motion ke liye koi law hi nahi hota.</p>
-      <p><strong>📜 Kisne diya?</strong><br>Sir Isaac Newton (1687)</p>
-      <p><strong>💡 Seekh:</strong><br>Force ke bina kuch move nahi karta — life mein bhi push chahiye hota hai.</p>
-    </section>
-
-    <section id="torque">
-      <h3>Torque</h3>
-      <p><strong>🔍 Kya hai?</strong><br>Rotational motion ke liye force ka effect — twisting force.</p>
-      <p><strong>🧠 Kyun padhein?</strong><br>Rotation, equilibrium, levers, wheels sab ke analysis ke liye important.</p>
-      <p><strong>🛠️ Real-life use:</strong><br>Steering wheel, wrench, ceiling fan motor.</p>
-      <p><strong>🤯 Agar nahi hota?</strong><br>Rotation ke problems samajhna mushkil ho jaata.</p>
-      <p><strong>📜 Kisne samjhaya?</strong><br>Euler + rotational mechanics ke pioneer scientists.</p>
-      <p><strong>💡 Seekh:</strong><br>Right direction me force lagao, result milega — warna ghoomte rahoge.</p>
-    </section>
-
-    <footer>
-      <p>Made by  • For learning and innovation • Add to Resume 🚀</p>
-    </footer>
+  <main>
+    <div class="topic-section" id="newton">
+      <h3>Newton's Laws</h3>
+      <p>Explore force, inertia, and motion in real-life scenarios like vehicles, cricket, and rockets.</p>
+      <div class="buttons">
+        <a href="#" class="btn">❓ Why</a>
+        <a href="#" class="btn">💡 What</a>
+        <a href="#" class="btn">🔨 Project</a>
+        <a href="#" class="btn">🛠️ Product</a>
+        <a href="#" class="btn">📓 Notes + Doubt</a>
+      </div>
+    
+<div class="section-container">
+  <div class="sidebar">
+    <strong>Topics</strong>
+    <a href="#com-car">🏎️ Sports Car COM</a>
+    <a href="#com-rocket">🚀 Rocket COM</a>
+    <a href="#com-robot">🤖 Robotics COM</a>
   </div>
+
+  <div class="main-content">
+    <div class="topic-card" id="com-car">
+      <h2>🏎️ Centre of Mass in Sports Car Design</h2>
+      <p><strong>Why:</strong> To keep vehicles stable during high-speed turns by lowering their center of mass.</p>
+      <p><strong>What:</strong> COM is placed low and central to prevent flipping and improve cornering grip.</p>
+      <div class="buttons">
+        <button>📓 Notes + Doubt</button>
+        <button>🔨 Project</button>
+        <button>🛠️ Product</button>
+      </div>
+      <div style="margin-top: 20px;">
+        <h3>🎥 Explainer Video:</h3>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/JMkXYo2G3KE" title="COM in Cars" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="topic-card" id="com-rocket">
+      <h2>🚀 Centre of Mass in Rocket & Satellite Stability</h2>
+      <p><strong>Why:</strong> COM shift during fuel burn affects trajectory and balance in space travel.</p>
+      <p><strong>What:</strong> Designers align COM and thrust vector to maintain stable flight.</p>
+      <div class="buttons">
+        <button>📓 Notes + Doubt</button>
+        <button>🔨 Project</button>
+        <button>🛠️ Product</button>
+      </div>
+      <div style="margin-top: 20px;">
+        <h3>🎥 Explainer Video:</h3>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/9bSu_Snlbsw" title="COM in Rockets" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="topic-card" id="com-robot">
+      <h2>🤖 Centre of Mass in Robotics & Human Movement</h2>
+      <p><strong>Why:</strong> Dynamic COM control allows robots and athletes to maintain balance and perform actions.</p>
+      <p><strong>What:</strong> COM shifts based on posture, motion, or load—critical for mobility and stunts.</p>
+      <div class="buttons">
+        <button>📓 Notes + Doubt</button>
+        <button>🔨 Project</button>
+        <button>🛠️ Product</button>
+      </div>
+      <div style="margin-top: 20px;">
+        <h3>🎥 Explainer Video:</h3>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/QkXKPdYDo2U" title="COM in Robotics" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="topic-section" id="optics">
+      <h3>Optics</h3>
+      <p>Learn about light behavior—reflection, refraction, lenses. Use in spectacles, cameras, and telescopes.</p>
+      <div class="buttons">
+        <a href="#">❓ Why</a>
+        <a href="#">💡 What</a>
+        <a href="#">🔨 Project</a>
+        <a href="#">🛠️ Product</a>
+        <a href="#">📓 Notes + Doubt</a>
+      </div>
+    </div>
+
+    <div class="topic-section" id="acids">
+      <h3>Acids & Bases</h3>
+      <p>Real-life use of pH in foods, medicines, soaps. Neutralization, indicators, experiments.</p>
+      <div class="buttons">
+        <a href="#">❓ Why</a>
+        <a href="#">💡 What</a>
+        <a href="#">🔨 Project</a>
+        <a href="#">🛠️ Product</a>
+        <a href="#">📓 Notes + Doubt</a>
+      </div>
+    </div>
+
+    <div class="topic-section" id="organic">
+      <h3>Organic Chemistry</h3>
+      <p>Explore hydrocarbons, functional groups, and how organic chemistry drives fuel, pharma, and plastic.</p>
+      <div class="buttons">
+        <a href="#">❓ Why</a>
+        <a href="#">💡 What</a>
+        <a href="#">🔨 Project</a>
+        <a href="#">🛠️ Product</a>
+        <a href="#">📓 Notes + Doubt</a>
+      </div>
+    </div>
+
+    <div class="topic-section" id="probability">
+      <h3>Probability</h3>
+      <p>Measure chance & prediction. Used in finance, AI, gaming, weather forecasting.</p>
+      <div class="buttons">
+        <a href="#">❓ Why</a>
+        <a href="#">💡 What</a>
+        <a href="#">🔨 Project</a>
+        <a href="#">🛠️ Product</a>
+        <a href="#">📓 Notes + Doubt</a>
+      </div>
+    </div>
+
+    <div class="topic-section" id="calculus">
+      <h3>Calculus</h3>
+      <p>Study change, motion, area, and trends. Backbone of physics, AI, economics, and machines.</p>
+      <div class="buttons">
+        <a href="#">❓ Why</a>
+        <a href="#">💡 What</a>
+        <a href="#">🔨 Project</a>
+        <a href="#">🛠️ Product</a>
+        <a href="#">📓 Notes + Doubt</a>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
